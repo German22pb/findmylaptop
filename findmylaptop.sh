@@ -8,7 +8,7 @@ while [[ ( $result =  $error ) || ( $result -eq 0) ]]
 do
 result=$(ping -c 4 ya.ru | tail -2 | head -1 | awk '{print $4}')
 sleep 60
-echo "Not connection"
+echo "No connection"
 done
 
 ssid=$(nmcli -t -f active,ssid dev wifi | grep 'yes' | cut -d\' -f2)
